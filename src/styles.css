@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #060609;
+  color: #f5f7ff;
+  font-feature-settings: 'ss01' on, 'cv05' on;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #2ee6c8;
+  outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(139, 124, 255, 0.4);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #060609;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b7cff55, #2ee6c855);
+  border-radius: 999px;
+  border: 2px solid #060609;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', Inter, ui-sans-serif, system-ui;
+  letter-spacing: -0.02em;
+}
+
+/* Panel de vidrio con borde fino tipo Linear */
+.glass {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 24px 70px -40px rgba(0, 0, 0, 0.9);
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #ffffff 10%, #b8adff 45%, #2ee6c8 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title {
+  @apply max-w-4xl font-display text-3xl md:text-5xl font-bold tracking-tight leading-[1.08];
+}
+
+.section-subtitle {
+  @apply mt-4 text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed;
+}
+
+/* Etiqueta técnica en monoespaciada: el lenguaje del data engineering */
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-slate-300;
+}
+
+.card-hover {
+  @apply transition duration-300 hover:-translate-y-1 hover:border-electric/40;
+}
+.card-hover:hover {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06) inset, 0 0 0 1px rgba(139, 124, 255, 0.15),
+    0 30px 80px -40px rgba(139, 124, 255, 0.35);
+}
+
+/* Botón primario con gradiente violeta→cian */
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-ink transition;
+  background: linear-gradient(100deg, #8b7cff, #2ee6c8);
+  box-shadow: 0 10px 40px -10px rgba(139, 124, 255, 0.5);
+}
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 50px -10px rgba(46, 230, 200, 0.5);
+}
+
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 font-semibold text-slate-200 transition hover:border-electric/50 hover:text-white;
+}
+
+.icon-link {
+  @apply inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 text-slate-300 transition hover:-translate-y-0.5 hover:border-mint/50 hover:text-mint;
+}
+
+.contact-link {
+  @apply flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.035] p-4 text-sm font-semibold text-slate-200 transition hover:-translate-y-0.5 hover:border-mint/30 hover:bg-white/[0.055];
+}
+
+.contact-link small {
+  @apply mb-1 block font-mono text-[9px] font-medium uppercase tracking-[0.17em] text-slate-600;
+}
+
+.contact-icon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-electric/10 text-electric;
+}
+
+.skip-link {
+  @apply fixed left-4 top-3 z-[80] -translate-y-20 rounded-lg bg-mint px-4 py-2 text-sm font-bold text-ink transition focus:translate-y-0;
+}
+
+/* Grano sutil para textura premium */
+.noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 640px) {
+  .noise::after {
+    opacity: 0.02;
+  }
+}
+
+/* Línea de gradiente decorativa */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 124, 255, 0.5), rgba(46, 230, 200, 0.5), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  :root { scroll-behavior: auto; }
+}
