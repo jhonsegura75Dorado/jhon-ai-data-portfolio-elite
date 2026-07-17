@@ -21,7 +21,7 @@ export default function Contact() {
               <a href="mailto:jhonsegura2506@gmail.com?subject=Conversación%20sobre%20Data%20%26%20AI" className="btn-primary">
                 <Mail className="h-5 w-5" /> Escribirme
               </a>
-              <a href="www.linkedin.com/in/jhon-alexander-segura-dorado-a19b47185" target="_blank" rel="noreferrer" className="btn-ghost">
+              <a href="https://www.linkedin.com/in/jhon-alexander-segura-dorado-a19b47185/" target="_blank" rel="noreferrer" className="btn-ghost">
                 <BriefcaseBusiness className="h-5 w-5" /> Ver LinkedIn
               </a>
             </div>
