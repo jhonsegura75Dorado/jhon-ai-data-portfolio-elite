@@ -87,7 +87,7 @@ export default function Hero() {
             <a href="#proyectos" className="btn-primary">
               Explorar casos <ArrowRight className="h-5 w-5" />
             </a>
-            <a href="https://www.linkedin.com/in/jhon-alexander-s-a19b47185" target="_blank" rel="noreferrer" className="btn-ghost">
+            <a href="www.linkedin.com/in/jhon-alexander-segura-dorado-a19b47185" target="_blank" rel="noreferrer" className="btn-ghost">
               <BriefcaseBusiness className="h-5 w-5" /> Perfil LinkedIn
             </a>
             <a href="https://github.com/jhonsegura75Dorado" target="_blank" rel="noreferrer" className="icon-link" aria-label="GitHub de Jhon Segura">
